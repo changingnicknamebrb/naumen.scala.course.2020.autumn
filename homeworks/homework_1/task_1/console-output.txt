@@ -1,0 +1,83 @@
+Welcome to Scala 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 11.0.8).
+Type in expressions for evaluation. Or try :help.
+
+scala> :help
+All commands can be abbreviated, e.g., :he instead of :help.
+:completions <string>    output completions for the given string
+:edit <id>|<line>        edit history
+:help [command]          print this summary or command-specific help
+:history [num]           show the history (optional num is commands to show)
+:h? <string>             search the history
+:imports [name name ...] show import history, identifying sources of names
+:implicits [-v]          show the implicits in scope
+:javap <path|class>      disassemble a file or class name
+:line <id>|<line>        place line(s) at the end of history
+:load <path>             interpret lines in a file
+:paste [-raw] [path]     enter paste mode or paste a file
+:power                   enable power user mode
+:quit                    exit the interpreter
+:replay [options]        reset the repl and replay all previous commands
+:require <path>          add a jar to the classpath
+:reset [options]         reset the repl to its initial state, forgetting all session entries
+:save <path>             save replayable session to a file
+:sh <command line>       run a shell command (result is implicitly => List[String])
+:settings <options>      update compiler options, if possible; see reset
+:silent                  disable/enable automatic printing of results
+:type [-v] <expr>        display the type of an expression without evaluating it
+:kind [-v] <type>        display the kind of a type. see also :help kind
+:warnings                show the suppressed warnings from the most recent line which had any
+
+scala>
+
+scala> print
+print   printf   println
+
+scala> println("hello scala! this is Deema")
+hello scala! this is Deema
+
+scala> val myname = "Deema"
+myname: String = Deema
+
+scala> print("hello scala! this is $myname")
+hello scala! this is $myname
+scala> print("hello scala! this is ${myname}")
+hello scala! this is ${myname}
+scala> print(s"hello scala! this is $myname")
+hello scala! this is Deema
+scala> print(s"finally!")
+finally!
+scala> val greetings = "hello"
+greetings: String = hello
+
+scala> println(s"$greetings scala! this is $myname")
+hello scala! this is Deema
+
+scala> val greetings = hola
+<console>:11: error: not found: value hola
+       val greetings = hola
+                       ^
+
+scala> val greetings = "hola"
+greetings: String = hola
+
+scala> println(s"$greetings scala! this is $myname")
+hola scala! this is Deema
+
+scala> val greetings = "guten tag"
+greetings: String = guten tag
+
+scala> println(s"$greetings scala! this is $myname")
+guten tag scala! this is Deema
+
+scala> val myname = myname.reverse
+<console>:12: error: recursive value myname needs type
+       val myname = myname.reverse
+                    ^
+
+scala> val mynamer = myname.reverse
+mynamer: String = ameeD
+
+scala> println(s"$greetings scala! this is $mynamer")
+guten tag scala! this is ameeD
+
+scala>
